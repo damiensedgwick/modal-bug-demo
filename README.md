@@ -1,50 +1,12 @@
-# Welcome to your Expo app 👋
+# Expo Modal Bug Demo (Maybe Not A Bug 🤷‍♂️)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+I recently went through this course on Frontend Masters: https://kadikraman.github.io/intermediate-react-native-v2-course/ and whilst following along I noticed a difference in behaviour between my app, and the app being presented by Kadi. When I clicked to save a new plant, rather than going back to the home screen, a new modal would popup with the home screens content. This happens indefinitely.
 
-## Get started
+After updating my Expo version this morning, I noticed this behaviour had returned in the app I had been building so I created this project from scratch to see if I could reproduce it and I can, see video.
 
-1. Install dependencies
+The behaviour can be seen when using `router.push()` or `router.navigate()` but not `router.back()` so I thought that maybe in the course, `router.back()` might have been used but upon checking, it is `router.navigate()` that is used.
 
-   ```bash
-   npm install
-   ```
+So I am unsure if this is a bug in the new Expo SDK or if this is new and intended behaviour.
 
-2. Start the app
+https://github.com/user-attachments/assets/68d7059e-e3ab-4563-8894-42b4f5112e15
 
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
